@@ -2,8 +2,17 @@
 // save input
 let saveBtn = $("");
 
-// trying to find code for current time display
-// retrieve input
+// trying to display clock in center
+var clockElement = document.getElementById( "clock" );
+
+function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+}
+setInterval(function () {
+    updateClock( clockElement );
+}, 1000);
+
+
 // parse is converting text into an object
 function retrieveLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
