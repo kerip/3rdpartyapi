@@ -1,8 +1,8 @@
-// the app is simply storing text input and as time passes, the css changes based on time
+// the app is simply storing text input and as time passes, the css changes 
 // save input
 let saveBtn = $("");
 
-// trying to display clock in center
+// display current time
 var clockElement = document.getElementById( "clock" );
 
 function updateClock ( clock ) {
