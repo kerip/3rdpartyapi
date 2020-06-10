@@ -1,6 +1,7 @@
 // save input
 let saveBtn = $("");
 
+// trying to find code for current time display
 // retrieve input
 function retrieveLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
