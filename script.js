@@ -37,23 +37,23 @@ let currentDay = moment().format('MMMM Do YYYY');
 $("#currentDay").text(currentDay);
 
 
-//  determine the current hour... 
+// this determines the current time
 let now = new Date();
 let hour = now.getHours();
 
-// CSS styling based on the current hour...
+// CSS styling based on the current hour
 for (let i = 9; i < 18; i++) {
     let currentId = "#hour-" + i;
     let currentHourBlock = $(currentId);
-    // past...
+    // past
     if (i < hour) {
         currentHourBlock.addClass("past");
     }
-    // future...
+    // future
     else if (i > hour) {
         currentHourBlock.addClass("future");
     }
-    // equal to current hour...
+    // equal to current hour
     else {
         currentHourBlock.addClass("present");
     }
@@ -90,5 +90,5 @@ $(".saveBtn").on("click", function (event) {
     let userInput17 = $("#hour-17").val().trim();
     localStorage.setItem("storedItem17", JSON.stringify(userInput17))
 });
-
+// local storage
 retrieveLocalStorage ()
