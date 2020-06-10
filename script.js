@@ -1,8 +1,10 @@
+// the app is simply storing text input and as time passes, the css changes based on time
 // save input
 let saveBtn = $("");
 
 // trying to find code for current time display
 // retrieve input
+// parse is converting text into an object
 function retrieveLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
 $("#hour-9").val(key9);
@@ -53,12 +55,12 @@ for (let i = 9; i < 18; i++) {
     else if (i > hour) {
         currentHourBlock.addClass("future");
     }
-    // equal to current hour
+    // present
     else {
         currentHourBlock.addClass("present");
     }
 }
-// here is the on click event to execute save to local storage functionality...
+// storeditem is saved to local storage
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let buttonID = $(this).attr("id");
@@ -90,5 +92,5 @@ $(".saveBtn").on("click", function (event) {
     let userInput17 = $("#hour-17").val().trim();
     localStorage.setItem("storedItem17", JSON.stringify(userInput17))
 });
-// local storage
+// this is the function to call for stored inputs
 retrieveLocalStorage ()
